@@ -1,0 +1,64 @@
+.bold-red{
+    color: darkred;
+    font-weight: bold;
+}
+
+.green{
+    color: green;
+}
+
+.blue{
+    color: blue;
+}
+
+.purple{
+    color:purple;
+}
+
+.orange{
+    color: orange;
+}
+
+.teal{
+    color: teal;
+}
+
+.brown{
+    color: brown;
+}
+
+.dark-blue{
+    color:darkblue;
+}
+
+.gray{
+    color:gray;
+}
+
+.mustard{
+    color:greenyellow;
+}
+
+.lavender{
+    color: rgb(123, 123, 187);
+}
+
+.yellow{
+    color: yellow;
+}
+
+.light-blue{
+    color:lightskyblue;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.cross-out {
+    text-decoration: line-through;
+}

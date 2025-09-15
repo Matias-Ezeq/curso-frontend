@@ -1,0 +1,28 @@
+body {
+    background-image: url(https://as2.ftcdn.net/jpg/02/12/51/19/1000_F_212511989_ZUbHqVT0j4aXO1Y53iUpCmgaRhE2YUGx.jpg);
+    backdrop-filter: blur(5px);
+    background-size: 100%;
+}
+
+article p {
+    text-align: justify;
+}
+
+article span {
+    display: block;
+    text-align: center;
+}
+
+img{
+    filter: drop-shadow(5px 5px 2px rgba(0,0,0,0.5));
+}
+
+article,header {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin: 1em;
+}
+
+.main-container {
+    padding-bottom: 1em;
+}
