@@ -1,7 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(https://as2.ftcdn.net/jpg/02/12/51/19/1000_F_212511989_ZUbHqVT0j4aXO1Y53iUpCmgaRhE2YUGx.jpg);
     backdrop-filter: blur(5px);
     background-size: 100%;
+    padding: 1em;
 }
 
 article p {
@@ -23,6 +30,3 @@ article,header {
     margin: 1em;
 }
 
-.main-container {
-    padding-bottom: 1em;
-}
