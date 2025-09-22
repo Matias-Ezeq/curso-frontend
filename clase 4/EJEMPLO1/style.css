@@ -1,0 +1,27 @@
+.hola{
+    color: rgb(145, 99, 29);
+}
+
+
+
+p{
+  color: rgb(214, 83, 22);
+}
+
+#pepe{
+    color: rgb(255, 51, 0);
+}
+
+.hola-1-d-c{
+  margin-top: 20px;
+  margin-right: 25px;
+  padding: 30px;
+}
+
+
+
+.jose p{
+     color: black;
+     opacity: 50%;
+     color: transparent;
+}
