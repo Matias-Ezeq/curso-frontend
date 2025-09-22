@@ -1,0 +1,58 @@
+.card{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20em;
+    height: 25em;
+    margin:auto;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px black;
+}
+
+.card header {
+    height: 40%;
+    padding; 0;
+    background-image: radial-gradient(circle at left bottom,rgb(74, 62, 243), rgb(145, 98, 255));
+}
+
+.oferta {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.oferta p{
+    text-align: center;
+    background-color: red;
+    margin:1em;
+    padding:.3em .5em;
+    border-radius: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.card main {
+    padding: 0 1em;
+}
+
+.card footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    color: green;
+    height: 25%;
+}
+
+.card footer button {
+    border-radius: 1.75em;
+    height: 3em;
+    width: 6em;
+    border: none;
+    background-color: rgb(0, 179, 179);
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor:pointer;
+}
