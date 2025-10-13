@@ -55,6 +55,6 @@ function diaDeSemana(dia) {
 
 //descuento por finde semana si es mayor o estudiante
 
-function tieneDescuento(edad,esEstudiante) {
-    return edad >= 18 || esEstudiante
+function tieneDescuento(dia,edad,esEstudiante) {
+    return diaDeSemana(dia) == "fin de semana" && (edad >= 18 || esEstudiante);
 }
