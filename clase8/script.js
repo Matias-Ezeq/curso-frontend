@@ -58,3 +58,19 @@ function diaDeSemana(dia) {
 function tieneDescuento(dia,edad,esEstudiante) {
     return diaDeSemana(dia) == "fin de semana" && (edad >= 18 || esEstudiante);
 }
+
+
+//funcion que salude
+
+function saludar() {
+    console.log("Hola!");
+}
+
+//funcion que salude con nombre
+function saludar(nombre) {
+    console.log("Hola "+ nombre +"!");
+}
+//funcion suma
+function suma(x,y) {
+    return x + y;
+}
