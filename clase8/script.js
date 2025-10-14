@@ -1,5 +1,3 @@
-
-
 //verificar si un numero es positivo o negativo
 function positivoONegativo(numero) {
     if (numero > 0) {
@@ -12,20 +10,6 @@ function positivoONegativo(numero) {
         console.log("cero");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //separar día de semana con fin de semana
 function diaDeSemana(dia) {
@@ -41,33 +25,18 @@ function diaDeSemana(dia) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 //descuento por finde semana si es mayor o estudiante
-
 function tieneDescuento(dia,edad,esEstudiante) {
     return diaDeSemana(dia) == "fin de semana" && (edad >= 18 || esEstudiante);
 }
 
 
 //funcion que salude
-
 function saludar() {
     console.log("Hola!");
 }
-
 //funcion que salude con nombre
-function saludar(nombre) {
+function saludarConNombre(nombre) {
     console.log("Hola "+ nombre +"!");
 }
 //funcion suma
