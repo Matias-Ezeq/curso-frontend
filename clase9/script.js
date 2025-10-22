@@ -61,6 +61,29 @@ function precioPizzas(cantidad, extras,cupon){
     Usa: Math.random(), if/else
 */
 
-function piedraPapelOTijera(eleccion) {
-    
+function piedraPapelOTijera() {
+    var chance = Math.random();
+    if (chance <= 0.3){
+        return "piedra";
+    }
+    else if (chance >= 0.3 && chance <= 0.6) {
+        return "papel";
+    }
+    else {
+        return "tijeras";
+    }
+}
+
+function jugarPPT(eleccion) {
+    var eleccionPC = piedraPapelOTijera();
+    if (eleccion != "piedra" && eleccion != "papel" && eleccion != "tijeras") {
+        return "elección inválida";
+    }
+    else if (eleccion == eleccionPC) {
+        return "Empate";
+    }
+    else if (eleccion == "piedra" && eleccionPC == "papel" || eleccion == "papel" && eleccionPC == "tijeras" || eleccion == "tijeras" && eleccionPC == "piedra") {
+        return ("perdiste, " + eleccionPC + " le gana a " + eleccion);
+    }
+    else return ("ganaste! " + eleccion + " le gana a " + eleccionPC) + "!";
 }
