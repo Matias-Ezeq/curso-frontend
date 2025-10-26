@@ -156,3 +156,78 @@ function calcularIMC(altura, peso) {
 function calcularInteres(tasa, capital, tiempo) {
     return capital + (capital * tasa/100)*tiempo;
 }
+
+/*
+    8 Generador de Username
+Crea username automático:Toma nombre y apellido, Convierte a minúsculas
+Elimina espacios, Añade 3 números aleatorios al final
+Ejemplo: "Ana Lopez" → "analopez457"
+9. Calculadora de Propinas
+Calcula propina según servicio: Divide la cuenta entre X personas
+*/
+
+function generarUsername(nombre, apellido) {
+    return (nombre.toLowerCase() + apellido.toLowerCase().replaceAll(" ","") + getRandomInt(1000).toString())
+}
+
+/*
+    9. Calculadora de Propinas
+Calcula propina según servicio: Divide la cuenta entre X personas
+Malo: 0%
+Regular: 10%
+Bueno: 15%
+Excelente: 20% et
+*/
+
+function calcularPropina(total, calidad, nroPersonas){
+    let porPersona = total/ nroPersonas;
+
+    if (calidad.toLowerCase() == "regular"){
+        porPersona += porPersona * 0.1;
+    }
+    else if (calidad.toLowerCase() == "bueno"){
+        porPersona += porPersona * 0.15;
+    }
+    else if (calidad.toLowerCase() == "excelente"){
+        porPersona += porPersona * 0.2;
+    }
+
+    return porPersona;
+}
+
+/*
+    10Convertidor de Temperatura
+Convierte entre Celsius, Fahrenheit y Kelvin: Valor, unidad origen, unidad destino
+determinar según continente tipo de temperatura
+*/
+
+function convertirTemperatura(de,a,grados) {
+    if (de.toLowerCase() == "celcius"){
+        if (a.toLowerCase() == "fahrenheit"){
+            return (grados * (9/5)) + 32;
+        }
+        else if (a.toLowerCase() == "kelvin"){
+            return grados + 273.15;
+        }
+        else {return "valor inválido";}
+    }
+    else if (de.toLowerCase() == "fahrenheit"){
+        if (a.toLowerCase() == "celcius"){
+            return (grados - 32) * (5/9)
+        }
+        else if (a.toLowerCase() == "kelvin"){
+            return convertirTemperatura("fahrenheit","celcius", grados) + 273.15;
+        }
+        else {return "valor inválido";}
+    }
+    else if (de.toLowerCase() == "kelvin"){
+        if (a.toLowerCase() == "fahrenheit"){
+            return convertirTemperatura("celcius","fahrenheit", grados - 273.15);
+        }
+        else if (a.toLowerCase() == "celcius"){
+            return grados - 273.15;
+        }
+        else {return "valor inválido";}
+    }
+    else {return "valor inválido";}
+}
