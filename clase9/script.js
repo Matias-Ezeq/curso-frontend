@@ -87,3 +87,72 @@ function jugarPPT(eleccion) {
     }
     else return ("ganaste! " + eleccion + " le gana a " + eleccionPC) + "!";
 }
+
+/*
+    4. Adivina el Número Secreto
+        Número secreto: entre 1 y 50 (generado aleatoriamente)
+        El usuario ingresa números hasta adivinar
+        (Pistas: "Más alto", "Más bajo", o "¡Caliente!" si está a 5 números o menos)
+        Usa: Math.abs(), comparaciones
+*/
+
+//ejemplo sacado de MDN 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function numeroSecreto() {
+    let numero = getRandomInt(50) + 1;
+    let intento = prompt("elije un numero entre 1 y 50:");
+
+    while (intento != prompt) {
+        estaCerca(intento, numero);
+        if (intento < numero) {
+            intento = prompt("Mas alto:");
+        }
+        else if (intento > numero) {
+            intento = prompt("Mas bajo:");
+        }
+        else { return "Ganaste!"}
+    }
+}
+
+function estaCerca(intento, numero) {
+    if (Math.abs(numero - intento) <= 5){
+        console.log("Caliente!");
+    }
+}
+
+/*
+    6. Calculadora de IMC (Índice de Masa Corporal)
+    Calcula el IMC con la fórmula: peso / (altura * altura)
+    Luego clasifica según si es hombre o mujer
+*/
+
+function calcularIMC(altura, peso) {
+    let IMC = peso / (altura*altura);
+
+    if (IMC < 18.5) {
+        return "peso inferior al normal";
+    }
+    else if (IMC >= 18.5 && IMC < 25) {
+        return "peso normal";
+    }
+    else if (IMC >= 25 && IMC < 30) {
+        return "peso mayor al normal";
+    }
+    else {
+        return "obesidad";
+    }
+
+}
+
+
+/*
+    7. Calculadora de Interés Simple
+    calcular el interés de una compra secando la tasa el capital y el tiempo de adquisición del objeto
+*/
+
+function calcularInteres(tasa, capital, tiempo) {
+    return capital + (capital * tasa/100)*tiempo;
+}
